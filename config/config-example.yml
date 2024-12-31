@@ -1,0 +1,38 @@
+server:
+  name: go-template-service
+  version: 1.0.2
+  port: :5000
+  mode: dev
+  readTimeout: 5s
+  writeTimeout: 5s
+  ssl: false
+  ctxDefaultTimeout: 5s
+  csrf: true
+  debug: true
+  maxCountRequest: 100
+  expirationLimitTime: 30s
+
+db:
+  autoMigrate: false
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: 123123@Admin
+    database: template_db
+
+cache:
+  redis:
+    mode: standalone
+    address:
+      - localhost:6379
+
+adapter:
+  auth:
+    url: localhost:5001
+    apiKey: fakeapikey
+
+logConfig:
+  level: debug
+  encoding: console
+
